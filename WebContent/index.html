@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="ISO-8859-1">
+    <title>Highradius</title>
+</head>
+
+<body>
+    <div>
+        <img class='abc_products' src="Group 20399.svg" alt="">
+        <span class='space'></span>
+        <img class='highradius-logo' src="logo.svg" alt="">
+    </div>
+    <h2 class="invoice-list">Invoice List</h2>
+    <div class="table-body">
+        <div class='add-button'>
+            <div class="buttons">
+
+                <!-- For Add Button -->
+                <button class="custom-button" id="add">
+					<img src="Path 18189.svg" alt="" style="vertical-align: middle;margin-top: 4%;">
+					<span>Add</span>
+				</button>&nbsp;&nbsp;
+
+                <!-- For Edit Button -->
+                <button class="custom-button" id="edit">
+					<img src="Path 18191.svg" alt="" style="vertical-align: middle;margin-top: 4%;">
+					<span>Edit</span>
+				</button>&nbsp;&nbsp;
+
+                <!-- For Delete Button -->
+                <button class="custom-button" id="delete">
+					<img src="Path 18189-1.svg" alt="" style="vertical-align: middle;">
+					<span>Delete</span>
+				</button>&nbsp;&nbsp;
+
+                <!-- For Search button -->
+                <span class="searching">
+                <input type="search" id="searched" onkeyup="myFunction()" placeholder="Search for Invoice" title="Type in a invoice-list">
+                
+                </span>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table">
+            <table id="customers">
+                <tr class='table-heading'>
+
+                    <!-- For Select-All Checkbox -->
+                    <th>
+                        <input type="checkbox" name="SelectAll" id="selectAll" onchange="checkall(this)">
+                        <label for="selectAll"> 
+                            <img id="imgselectAll" alt="">
+                            </label>
+                    </th>
+
+                    <!-- Column Names in the Table -->
+                    <th>Customer Name</th>
+                    <th>Customer #</th>
+                    <th>Invoice #</th>
+                    <th>Invoice Amount</th>
+                    <th>Due Date</th>
+                    <th>Predicted Payment Date</th>
+                    <th>Predicted Aging Bucket</th>
+                    <th>Notes</th>
+                </tr>
+            </table>
+
+            <!-- Navigation Button -->
+            
+        </div>
+    </div>
+
+    <!-- Adding the Add-Modal for popup -->
+    <div class="modal" id="add-modal">
+        <div class="modal-header add-header">
+            Add Invoice
+            <img id="close1" src="baseline-close-24px.svg" alt="" srcset="">
+        </div>
+        <div class="modal-body add-body">
+            <form class='add-form' action="" method="post">
+                <div class="inner-grid">
+                    <label for="customer-name">Customer Name<span> *</span></label>
+                    <input type="text" name="" id="customer-name">
+                    <label for="customer-number">Customer No.<span> *</span></label>
+                    <input type="text" name="" id="customer-number">
+                    <label for="invoice-number">Invoice No.<span> *</span></label>
+                    <input type="text" name="" id="invoice-number">
+                    <label for="invoice-amount">Invoice Amount<span> *</span></label>
+                    <input type="text" name="" id="invoice-amount">
+                </div>
+                <div class="inner-grid2">
+                    <label for="due-date">Due date<span> *</span></label>
+                    <div style="margin-top: -12px;margin-left: -10px;">
+                        <input type="date" name="" id="due-date">
+                        <img id="dateIcon" src="images\calendar_today-24px.svg" alt="">
+                    </div>
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" class="notes" name="Notes" rows="12" cols="50"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer add-footer">
+            <span id="add-cancel" style="cursor: pointer;" class="cancel">Cancel</span>
+            <span class="add-clr-btn">
+				<button id="add-clr" class="custom-button clr-btn">
+					Clear
+				</button>
+				&nbsp;&nbsp;&nbsp;
+				<button id="add-add" disabled class="custom-button add-btn">
+					Add
+				</button>
+			</span>
+        </div>
+    </div>
+
+    <!-- Edit-Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-header edit-header">
+            Edit Invoice
+            <img id="close2" src="images\baseline-close-24px.svg" alt="" srcset="">
+        </div>
+        <div class="modal-body edit-body">
+            <div class="inner-grid2 edit-body-form">
+                <label for="due-date">Invoice Amount<span> *</span></label>
+                <input type="text" name="InvoiceAmount" id="invoice-amount2">
+                <label for="notes">Notes</label>
+                <textarea id="notes2" class="notes" name="Notes" rows="12" cols="50"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer edit-footer">
+            <span id="edit-cancel" style="cursor: pointer;" class="cancel">Cancel</span>
+            <span class="add-clr-btn">
+			<button id="edit-clr" class="custom-button clr-btn">
+				Reset
+			</button>
+			&nbsp;&nbsp;&nbsp;
+			<button disabled id="edit-save-button" class="custom-button add-btn">
+				Save
+			</button>
+		</span>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal" id="delete-model">
+        <div class="modal-header delete-header">
+            Delete Record(s)?
+            <img id="close3" src="images\baseline-close-24px.svg" alt="">
+        </div>
+        <div class="modal-body delete-body">
+            <div>
+                You'll lose your record(s) after this action. We can't recover them once you delete.<br><br> Are you sure you want to <span>permanently delete</span> them?
+            </div>
+        </div>
+        <div class="modal-footer delete-footer">
+            <span class="add-clr-btn">
+				<button class="custom-button clr-btn">
+					Cancel
+				</button>
+				&nbsp;&nbsp;&nbsp;
+				<button class="custom-button add-btn">
+					Delete
+				</button>
+			</span>
+        </div>
+</div>
+        <!-- using Js -->
+        <script src="index.js"></script>
+            <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searched");
+            z = input.value.toString();
+            filter = z.toUpperCase();
+            table = document.getElementById("customers");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[3];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

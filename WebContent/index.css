@@ -1,0 +1,450 @@
+ /* First we will set the body  */
+
+body {
+    background-color: #58687E;
+}
+
+.space {
+    padding: 9rem;
+}
+
+
+/* Adding style to invoice list */
+
+.invoice-list {
+    top: 100px;
+    left: 30px;
+    width: 141px;
+    height: 31px;
+    text-align: left;
+    font: normal normal normal 28px/32px Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+/* Adding style to table */
+
+.table-body {
+    top: 161px;
+    left: 1rem;
+    width: 95rem;
+    height: 100%;
+    background: #273D49CC 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+   
+}
+
+.add-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons {
+    justify-content: right;
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+}
+
+
+/* for each button */
+
+.custom-button {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #14AFF1;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+}
+
+.custom-button:disabled:hover {
+    cursor: not-allowed;
+}
+
+.buttons button {
+    background-color: #273D49CC;
+}
+
+
+/* add button */
+
+#add span {
+    font: normal normal normal 20px/24px Ubuntu;
+    letter-spacing: 0px;
+    font-size: 100%;
+}
+
+
+/* edit button */
+
+#edit span {
+    font: normal normal normal 20px/24px Ubuntu;
+    letter-spacing: 0px;
+    font-size: 100%;
+}
+
+
+/* Delete button */
+
+#delete span {
+    font: normal normal normal 20px/24px Ubuntu;
+    letter-spacing: 0px;
+    font-size: 100%;
+    margin-top: 4%;
+}
+
+
+/* image  */
+
+.buttons button img {
+    top: 206px;
+    left: 1144px;
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+}
+
+.buttons button span {
+    top: 201px;
+    left: 1168px;
+    width: 25px;
+    height: 20px;
+    text-align: right;
+    font: normal normal normal 20px/24px Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    /* color: #97A1A9; */
+    opacity: 1;
+}
+
+
+/* Search bar */
+
+#searched {
+    position: relative;
+    width: 250px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background: #283A46 0% 0% no-repeat padding-box;
+    color: white;
+}
+
+
+/* search image of icon */
+
+#searchIcon {
+    position: relative;
+    top: 10px;
+    right: 30px;
+    border-top: 10px;
+}
+
+
+/* In the table  */
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+#customers td,
+#customers th {
+    padding: 8px;
+}
+
+#customers tr:nth-child(2n+3) {
+    background-color: #283A46;
+}
+
+#customers tr:hover {
+    background-color: #2A5368;
+}
+
+#customers th {
+    /* padding-top: 12px;
+    padding-bottom: 12px; */
+    text-align: right;
+    border: 0px;
+    background-color: #273D49CC;
+    color: #97A1A9;
+}
+
+#customers tr th:nth-child(2) {
+    text-align: left;
+}
+
+#customers tr th:first-child(2) {
+    text-align: left;
+}
+
+#customers tr th:last-child {
+    text-align: left;
+}
+
+#customers tr td:nth-child(2) {
+    text-align: left;
+}
+
+#customers tr td:last-child {
+    text-align: left;
+}
+
+.table-heading {
+    background-color: #58687E;
+    border-bottom: 1px solid #283A46;
+}
+
+.table {
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.circle1 {
+    box-shadow: 0px 2px 6px #00000069;
+    top: 17rem;
+    right: 0rem;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    background-color: #14AFF1;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle2 {
+    box-shadow: 0px 2px 6px #00000069;
+    top: 17rem;
+    left: 0rem;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    background-color: #97A1A9;
+    border-radius: 50%;
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.circle1 img {
+    width: 25px;
+    height: 25px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.circle2 img {
+    width: 25px;
+    height: 25px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+#customers input[type="checkbox"]+label img {
+    content: url("check_box_outline_blank-black-18dp.svg");
+}
+
+#customers input[type="checkbox"]:checked+label img {
+    content: url("check_box-black-18dp.svg");
+}
+
+.modal-header {
+    background-color: #2A3E4C;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 1px solid #1A262F;
+    padding: 20px;
+}
+
+.modal-header img {
+    cursor: pointer;
+}
+
+.add-header {
+    width: 60%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 12%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.modal-body {
+    background-color: #2A3E4C;
+    margin: auto;
+    border-bottom: 1px solid #1A262F;
+    padding: 20px;
+    border-bottom: 1px solid #1A262F;
+}
+
+.add-body {
+    width: 60%;
+}
+
+.add-form {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.add-form input {
+    width: 15rem;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #356680;
+    background: #283A46 0% 0% no-repeat padding-box;
+    color: white;
+}
+
+.add-form div {
+    padding: 10px;
+}
+
+.add-form span {
+    color: red;
+}
+
+.inner-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1.5rem;
+}
+
+.inner-grid2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px 100px;
+}
+
+.notes {
+    width: 15rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #356680;
+    background: #283A46 0% 0% no-repeat padding-box;
+    color: white;
+    height: 100px;
+    resize: none;
+}
+
+.modal-footer {
+    color: #14AFF1;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A3E4C;
+    margin: auto;
+    border-bottom: 1px solid #1A262F;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.add-footer {
+    width: 60%;
+}
+
+.cancel {
+    padding-top: 5px;
+    padding-left: 1rem;
+}
+
+.clr-btn {
+    background-color: #2A3E4C;
+    color: white;
+}
+
+.add-btn {
+    color: white;
+    background-color: #14AFF1;
+}
+
+.add-clr-btn {
+    padding-right: 1rem;
+}
+
+.edit-header {
+    width: 30%;
+}
+
+.edit-body {
+    width: 30%;
+}
+
+.edit-body input {
+    width: 15rem;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #356680;
+    background: #283A46 0% 0% no-repeat padding-box;
+    color: white;
+}
+
+.edit-body span {
+    color: red;
+}
+
+.edit-footer {
+    width: 30%;
+}
+
+.delete-header {
+    width: 30%;
+}
+
+.delete-body {
+    width: 30%;
+}
+
+.delete-body span {
+    color: red;
+}
+
+.delete-footer {
+    width: 30%;
+    justify-content: flex-end;
+}
+
+#due-date {
+    position: relative;
+    width: 15rem;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    background: #283A46 0% 0% no-repeat padding-box;
+    color: white;
+    border: 1px solid #356680;
+}
+
+
+/* Date Icon */
+
+#dateIcon {
+    position: relative;
+    top: 8px;
+    right: 35px;
+    border-top: 10px;
+}
